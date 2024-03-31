@@ -23,12 +23,12 @@ function typeWriter(text, element) {
 function getJoke() {
   let apiKey = "f08f864ef6a33151ee24fc3db63obtbb";
   let context =
-    "be funny and tell a joke which includes the keyword you've just received in the userPrompt variable";
+    "be funny and tell a joke which includes the keyword you've just received in the userPrompt variable - please write it as a poem";
   let userPrompt = inputElement.value;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${userPrompt}&context=${context}&key=${apiKey}`;
 
   // Set the text to "Working on your joke" before making the API call
-  jokeElement.textContent = "Working on your joke...";
+  jokeElement.textContent = "Working on your poem...";
 
   axios
     .get(apiUrl)
