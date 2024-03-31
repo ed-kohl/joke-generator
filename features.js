@@ -23,7 +23,7 @@ function typeWriter(text, element) {
 function getJoke() {
   let apiKey = "f08f864ef6a33151ee24fc3db63obtbb";
   let context =
-    "Please be funny and tell a joke which includes the keyword you've just received in the userPrompt variable - please write it as a poem, divide it with HTML in paragraphs. Start a new paragraph after each sentence";
+    "Please be funny and tell a short joke in poem format which includes the keyword you've just received in the userPrompt variable. Please generate  it as 4 line poem";
   let userPrompt = inputElement.value;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${userPrompt}&context=${context}&key=${apiKey}`;
 
