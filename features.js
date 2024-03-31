@@ -3,6 +3,22 @@ const inputElement = document.getElementById("keyword");
 const jokeButton = document.getElementById("jokebutton");
 const jokeElement = document.getElementById("joke");
 
+// Function to add a typewriter effect
+function typeWriter(text, element) {
+  let i = 0;
+  const speed = 300; // Speed of typing in milliseconds
+
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
+}
+
 // Function to get a joke from the API
 function getJoke() {
   let apiKey = "f08f864ef6a33151ee24fc3db63obtbb";
